@@ -45,6 +45,10 @@ blockquote{
 	padding-left: 10px;
 }
 
+blockquote img{
+	margin: 0 15px 14px 0  !important;
+}
+
 #main {
 	width: 900px;
 	margin: 0 auto;
