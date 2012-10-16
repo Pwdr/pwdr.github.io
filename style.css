@@ -102,6 +102,32 @@ hgroup li{
 	margin-left: -20px;
 }
 
+table.tableizer-table {
+	font-family: ITCOfficinaSerifStdBookRg, sans-serif; 
+	font-size: 14px;
+} 
+
+.tableizer-table td {
+	padding: 2px;
+	margin: 2px;
+	border-bottom: 1px dotted #aaaaaa;
+	border-right: 1px dotted #aaaaaa;
+}
+
+.tableizer-table th {
+	border: 0px solid #333333;
+	color: #000;
+	font-weight: bold;
+	border-bottom: 1px dotted #aaaaaa;	
+	border-right: 1px dotted #aaaaaa;
+}
+
+.tableizer-table tr {
+	border: 1px solid #333333;
+	color: #000;
+	font-weight: bold;
+}
+
 footer{
 	font-size: 13px;
 	text-align: center;
