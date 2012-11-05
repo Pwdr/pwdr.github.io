@@ -1,6 +1,7 @@
 html {
 	background: url("images/Pwdr-background.png") repeat-y  top;
 	min-width: 900px;
+	border: none;
 }
 
 @font-face {
@@ -60,7 +61,7 @@ header{
 	height: 100%;
 	text-align: center;
 	text-shadow: #fff 0px 1px 1px;
-	position: fixed;
+	position: fixed; 
 }
 
 header img{
