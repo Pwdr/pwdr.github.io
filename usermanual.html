@@ -78,15 +78,15 @@
 			
 			<p>The firmware running on the Arduino micro-controller controls all actuators. The print file is stored on it&#8217;s internal memory. This means that every new print file must be uploaded to the micro-controller using the <a hfre="http://arduino.cc/en/Main/Software">Arduino IDE</a>. The print files are made by the preprocessor.</p>
 			
-			<h3 id="preprocessorpwdr_gui_v2.0">Preprocessor / Pwdr_GUI_V2.0</h3>
+			<h3 id="preprocessorpwdr_gui_v2.0">Preprocessor / Pwdr_GUI_V3.0</h3>
 			
-			<p>The client software is written in Processing. To run the program, you need the <a href="http://processing.org/download">Processing environment</a>. When the client software is run, it opens in the preprocessor mode. Here, you can choose the model you want to print and convert it to a print file. The print files are saved in the folder &#8216;Arduino/PwdrFirmware&#8217; along the main firmware file. To upload the print files, open the Arduino IDE and click &#8216;compile and upload&#8217;.</p>
+			<p>The client software is written in Processing. To run the program, you need the <a href=“http://processing.org/download”>Processing environment</a>. Use version 1.5.1, as newer version don’t work for the Pwdr. When the client software is run, it opens in the preprocessor mode. Here, you can choose the model you want to print and convert it to a print file. The print files are saved in the folder called PWDR, copy the folder to your SD card and insert it in the machine. </p>
 			
 			<blockquote>
-			<p>Note: the client software needs a serial line for communication with the micro-controller. Fill in the correct serial port number on line 87 of &#8216;Pwdr_GUI_V2.0.pde&#8217;, the available ports are shown in the verbose output of the Processing IDE when the file is run. When the correct port number is edited, it&#8217;s possible to compile the program to a standalone version which doesn&#8217;t need the Processing IDE to run. </p>
+			<p>Note: the client software needs a serial line for communication with the micro-controller. Fill in the correct serial port number on line 87 of &#8216;Pwdr_GUI_V3.0.pde&#8217;, the available ports are shown in the verbose output of the Processing IDE when the file is run. When the correct port number is edited, it&#8217;s possible to compile the program to a standalone version which doesn&#8217;t need the Processing IDE to run. </p>
 			</blockquote>
 			
-			<h3 id="controlsoftwarepwdr_gui_v2.0">Control software / Pwdr_GUI_V2.0</h3>
+			<h3 id="controlsoftwarepwdr_gui_v2.0">Control software / Pwdr_GUI_V3.0</h3>
 			
 			<p>When the button &#8216;print&#8217; is clicked in the preprocessor, the client software switches to control mode. Here, you can jog the various actuators and control the machine. To start a print job, simply click &#8216;print&#8217;. </p>
 			
@@ -98,13 +98,9 @@
 			
 			<h3 id="convertmodeltoprintabledata">Convert model to printable data</h3>
 			
-			<p>Open the Pwdr_GUI Processing program. Make sure the Arduino micro-controller is connected. Run the program. Fill the correct serial port number (listed in the Processing verbose window) in on line 86 of Pwdr_GUI_V2.0.pde. Stop the program and run again.</p>
+			<p>Open the Pwdr_GUI Processing program. Make sure the Arduino micro-controller is connected. Run the program. Fill the correct serial port number (listed in the Processing verbose window) in on line 86 of Pwdr_GUI_V3.0.pde. Stop the program and run again.</p>
 			
-			<p>Open up the file that is due to be printed. Click &#8216;convert model&#8217;. Make sure the file has a height divisible by 12. Otherwise, a verbose message will be shown. Click &#8216;send print file&#8217;. The two files with print data (&#8216;PwdrPrintData.ino&#8217; and &#8216;PwdrPrintDataUpper.ino&#8217;) are now saved to a folder called &#8216;Arduino&#8217;.</p>
-			
-			<blockquote>
-			<p>Note: Currently, the only way to change the parameters is by hardcoding them in the Processing parameter declarations (saturation, file height, etc.). These parameters are included in the print file that is send to the micro-controller.</p>
-			</blockquote>
+			<p>Open up the file that is due to be printed. Click ‘convert model’. Copy the folder PWDR, which is filled with .dat files, containing information for each slice, to the SD card. The config file holds various print parameters.</p>
 			
 			<h3 id="sentprintabledatatomicro-controller">Sent printable data to micro-controller</h3>
 			
